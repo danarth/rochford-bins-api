@@ -1,0 +1,17 @@
+[project]
+name = "rochford-bins-api"
+version = "0.1.0"
+description = "An API for the Rochford District Council bin collection calendar"
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "playwright (>=1.52.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
