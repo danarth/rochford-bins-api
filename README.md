@@ -52,3 +52,14 @@ There are two endpoints (types of files):
     ]
 }
 ```
+
+## Example Usage
+
+Given that the files are just hosted as JSON files, a simple HTTP GET request will get the data you
+need:
+
+```python
+import requests
+resp = requests.get("https://danarth.github.io/rochford-bins-api/api/collections/albany-road.json")
+print(resp.json()['collection_days'][0]) # {'date': '2024-08-07', 'bin_type': 'Recycling collection week'}
+```
