@@ -10,10 +10,10 @@ hosted on GitHub Pages. This is done (a) for simplicity and (b) because the tool
 
 There are two endpoints (types of files):
 
-| Endpoint                      | Description                                                                   |
-| ----------------------------- | ----------------------------------------------------------------------------- |
-| `/roads.json`                 | A list of all roads their area and their *usual* collection day.              |
-| `/collections/:roadName.json` | A list of the collection days and associated information for a specific road. |
+| Endpoint                    | Description                                                                   |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| `/roads.json`               | A list of all roads their area and their *usual* collection day.              |
+| `/collections/:roadId.json` | A list of the collection days and associated information for a specific road. |
 
 ### All Roads
 
@@ -21,9 +21,10 @@ There are two endpoints (types of files):
 {
  "all_roads": [
     {
-        "road": "",
-        "area": "",
-        "collection_day": ""
+        "road": "AVONDALE ROAD",
+        "area": "RAYLEIGH",
+        "usual_collection_day": "Wednesday",
+        "id": "avondale-road"
     }
  ]
 }
@@ -37,9 +38,11 @@ There are two endpoints (types of files):
     "road": "",
     "area": "",
     "usual_collection_day": "",
-    "collection_days": {
-        "2024-01-01": "Non-Recyclables",
-        "2025-01-01": "Recyclables"
-    }
+    "collection_days": [ 
+        {
+            "date": "2024-01-01",
+            "bin_type": "Non-Recycling collection week"
+        }
+    ]
 }
 ```
