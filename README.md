@@ -16,10 +16,13 @@ Base URL: `https://danarth.github.io/rochford-bins-api/api/`
 
 There are two endpoints (types of files):
 
-| Endpoint                    | Description                                                                   |
-| --------------------------- | ----------------------------------------------------------------------------- |
-| `/roads.json`               | A list of all roads their area and their *usual* collection day.              |
-| `/collections/:roadId.json` | A list of the collection days and associated information for a specific road. |
+| Endpoint                    | Description                                                                   | Example                                |
+| --------------------------- | ----------------------------------------------------------------------------- | -------------------------------------- |
+| `/roads.json`               | A list of all roads their area and their *usual* collection day.              | [`/roads.json`][1]                     |
+| `/collections/:roadId.json` | A list of the collection days and associated information for a specific road. | [`/collections/avondale-road.json`][2] |
+
+[1]: https://danarth.github.io/rochford-bins-api/api/roads.json
+[2]: https://danarth.github.io/rochford-bins-api/api/collections/avondale-road.json
 
 ### All Roads
 
