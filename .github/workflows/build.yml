@@ -24,7 +24,7 @@ jobs:
         run: poetry run python -m rochford_bins_api.main
       - name: Upload static files as artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+        uses: actions/upload-pages-artifact@v3
         with:
           path: out
   deploy:
@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

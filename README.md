@@ -1,3 +1,7 @@
+<p align="center">
+    <img alt="bins" src="https://raw.githubusercontent.com/danarth/rochford-bins-api/main/static/logo.png" width="400">
+</p>
+
 # Rochford Bins API
 
 An API for the Rochford District Council bin collection calendar. Useful for home automation
@@ -7,6 +11,8 @@ Note that this isn't a *proper* API. It's a series of JSON files scraped from th
 hosted on GitHub Pages. This is done (a) for simplicity and (b) because the tools are free!
 
 ## Structure of the files
+
+Base URL: `https://danarth.github.io/rochford-bins-api/api/`
 
 There are two endpoints (types of files):
 
