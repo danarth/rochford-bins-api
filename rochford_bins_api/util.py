@@ -1,4 +1,5 @@
 from datetime import datetime
+import re
 
 def parse_date(date: str, year: str) -> datetime:
     """
@@ -20,3 +21,11 @@ def weekday_to_int(weekday: str) -> int:
         "Sunday": 6,
     }
     return days[weekday]
+
+
+def slugify(text: str) -> str:
+    """
+    Replace non-alphanumeric characters with hyphens
+    """
+    text = re.sub(r"[^a-zA-Z0-9]+", "-", text)
+    return re.sub(r"-+", "-", text).strip("-").lower()

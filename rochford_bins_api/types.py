@@ -16,8 +16,13 @@ class RoadOverview:
 
 
 @dataclass
+class RoadOverviewResponse(RoadOverview):
+    id: str
+
+
+@dataclass
 class AllRoadsResponse:
-    all_roads: list[RoadOverview]
+    all_roads: list[RoadOverviewResponse]
 
 
 @dataclass
