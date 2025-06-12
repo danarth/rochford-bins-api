@@ -64,7 +64,7 @@ async def main():
         await collections_page.navigate()
         logger.info("Fetching all road names...")
         all_roads = await collections_page.get_all_road_names()
-        all_roads = all_roads[:50]
+        all_roads = all_roads[:10]
         logger.info("Fetching all road names... Done")
 
         logger.info(f"{len(all_roads)} roads found. Fetching road-specific info...")
