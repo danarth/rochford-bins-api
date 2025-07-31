@@ -40,6 +40,7 @@ class BinsAndCollectionsCalendarPage:
         if not date_range or not bin_type:
             return []
         date_range = re.sub(r"(\d{1,2})(st|nd|rd|th)", r"\1", date_range)
+        date_range = re.sub(r"[\u002D\u2013\u2014]", "-", date_range)
         if "-" in date_range:
             dates = date_range.split("-")
             start_date = parse_date(dates[0], year)
